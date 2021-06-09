@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>Historique</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="shortcut icon" type="image/png" href="img/logo.png">
+        <meta charset="utf-8">
+    </head>
+<!-- NAVIGUABLE -->
+    <header>
+        <nav>
+            <ul>
+                <a href="index.html"><img id="logo" class="header"src="img/logo.png" alt="train-logo"></a>
+                <a href="index.html"><li>Accueil</li></a>
+                <a href="panier.html"><li>Panier</li></a>
+                <a href="historique.html"><li class="historique">Historique</li></a>
+                <a href="favori.html"><li>Favori</li></a>
+                <a href="connexion.html"><li>Connexion</li></a>
+            </ul>
+        </nav>
+    </header>
+
+    <body onload='loadhisto()'>
+
+        <div id='contenuhisto'></div>
+
+
+        <div id="deleteall">
+            <img src="img/trash.png" id="alltrash">
+            <p>Tout supprimer !</p>
+        </div>
+
+    </body>
+<!-- FOOTER -->
+    <footer>
+        <ul>
+            <a href="index.html"><img id="logo" class="footer" src="img/logo.png" alt="train-logo"></a>
+            <a href=" "><li>© 2021 yanis</li></a>
+            <a href=" "><li>Mentions légales</li>
+            <a href=" "><li>PDC</li></a>
+            <a href=" "><li>CGVU</li></a>            
+            <div class="oui">
+                <a href="mailto:yanis.bouhouche@etu.univ-grenoble-alpes.fr" class="mail-img" target="_blank"><img id="mail" src="img/mail.png" alt="mail-logo"></a>
+                <div class="mail">yanis.bouhouche@etu.univ-grenoble-alpes.fr</div>
+                <a class="tel-img"><img id="tel"src="img/tel.png" alt="tel-logo"></a>  
+                <div class="tel">07.60.19.10.82</div>
+                <a href="https://twitter.com/WaifuLegacy" target="_blank"><img id="twi" src="img/twitter.png" alt="twitter-logo"></a>
+                <a href="https://www.youtube.com/watch?v=eR-gpNyb0qU" target="_blank"><img id="ytb" src="img/youtube.png" alt="youtube-logo"></a>
+            </div>
+        </ul>
+    </footer>
+    <script type="text/javascript" src="script/histo.js"></script>
+</html>

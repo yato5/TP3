@@ -1,0 +1,618 @@
+@font-face{
+    font-family: "TTRounds";
+    src: url(img/TTRoundsNeue-CondRegular.ttf);
+}
+
+@font-face{    
+    font-family: "TTRoundsLight";
+    src: url(img/TTRoundsNeue-CondLight.ttf);
+}
+
+:root{
+    background-color: #1D2021;
+    color: #A9A399;    
+    font-family: Roboto, "Open Sans", sans-serif;
+    
+}
+
+body{
+    margin: 0 auto;
+    position: relative;
+}
+
+/* ========== NAV + FOOTER ========== */
+
+header, footer{
+    background-color: #181A1B;
+}
+
+footer{
+    width: 100%;    
+    position: absolute;
+    bottom: 0;
+}
+
+footer.index{
+    width: 100%;    
+    position: relative;
+    bottom: 0;
+}
+
+nav > ul > a > #logo, footer > ul > a #logo{
+    height: 45px;
+    padding-right: 20px;    
+}
+
+
+nav > ul, footer > ul{
+    padding: 0;
+	display: flex;
+	justify-content: center;
+	margin: 0px;
+    padding: 8px;
+}
+
+nav > ul > a > li{
+    margin-top: 10px;
+}
+
+nav > ul > a > li:hover, footer > ul > a > li:hover{
+    border-bottom: solid #A9A399 3px;
+    border-radius: 2px;
+    border-bottom-width: 2px ;
+    color: #fa5a6c;
+}
+
+.acc, .panier, .historique, .fav, .connexion{
+    border-bottom: solid #A9A399 3px;
+    border-radius: 2px;
+    border-bottom-width: 2px ; 
+    color: #fa5a6c;
+}
+
+footer > ul > a > li{
+    margin-top: 22px;
+}
+
+a, .oui{
+    text-decoration: none;
+    color: #FF2E46;
+	display: flex;
+	justify-content: center;
+	margin: 0px;
+    padding: 5px;    
+	flex-basis: 13%;    
+	text-align: center;    
+    list-style-type: none;
+    font-size: 1.2em;
+}
+
+
+footer > ul > a{
+    font-size: 0.9em;
+    flex-basis: 9%;
+}
+
+footer > ul > div > a > #mail, footer > ul > div > a > #tel, footer > ul > div > a > #twi, footer > ul > div > a > #ytb{
+    height: 30px;
+    padding-left: 20px;
+    padding-top: 10px;
+    vertical-align: middle;
+}
+
+footer > ul > div > a > #mail:hover, footer > ul > div > a > #tel:hover, footer > ul > div > a > #twi:hover, footer > ul > div > a > #ytb:hover{
+    transform: scale(1.2);
+}
+
+
+.tel{
+    position: absolute;
+    backdrop-filter: brightness(0.5) blur(2px);
+    padding: 10px;
+    border-radius: 5%;
+    display: none;
+    bottom: 74%;
+    font-size: 0.7em;
+}
+.mail{
+    position: absolute;
+    backdrop-filter: brightness(0.5) blur(2px);
+    padding: 10px;
+    border-radius: 5%;
+    display: none;
+    bottom: 75%;
+    font-size: 0.7em;
+}
+
+.tel-img:hover ~ .tel {
+    display: block;
+}
+.mail-img:hover ~ .mail {
+    display: block;
+}
+
+/* ========== PAGE D'ACCUEUIL ========== */  
+
+    /* ==== SLIDER EVENEMENTS / INFOS COMPAGNIE DE TRAIN ==== */
+
+.slide > img {
+    height: 50%;
+    width: 100%;
+}
+.slider{    
+    position: relative;
+    margin: auto;
+}
+.slide{
+    display: none;
+}
+.numbertext {
+    color: #FF2E46;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 8px 12px;
+    position: absolute;
+    top: 2%;
+    right: 0.5%;    
+	backdrop-filter: brightness(0.5) blur(2px);
+}
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: #FF2E46;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+    backdrop-filter: brightness(0.5) blur(2px);
+}
+.anim {
+    -webkit-animation-name: anim;
+    -webkit-animation-duration: 2.5s;
+    animation-name: anim;
+    animation-duration: 2.5s;
+}  
+@keyframes anim {
+    from {opacity: .1}
+    to {opacity: 1}
+}
+
+    /* ==== FORMULAIRE DE RECHERCHE ==== */
+
+.container{
+    display: flex;
+    justify-content: center;
+    line-height: 2.5;
+    font-family: TTRoundsLight;
+    font-size: 1.3em;
+}
+
+form > .container > .depart-search{
+    backdrop-filter: brightness(0.5) blur(2px);
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: -2.6%;
+    padding-right: 70px;
+}
+
+.container > .dteprovenance{
+    backdrop-filter: brightness(0.5) blur(2px);
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 1%;
+    text-align: center;
+}
+
+.container > .dtearrivee{
+    backdrop-filter: brightness(0.5) blur(2px);
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 1%;
+    margin-left: 20%;
+    text-align: center;
+}
+
+
+.container > .submit{
+    backdrop-filter: brightness(0.5) blur(2px);
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 2%;
+}
+
+.depart-search select {
+    background: none;
+    margin: 5px auto;
+    text-align: center;
+    border: 2px solid #FF2E46;
+    padding: 14px 40px;
+    outline: none;
+    color: #A9A399;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.submit input[type = "submit"] {
+    background: none;
+    margin: 5px auto;
+    display: block;
+    text-align: center;
+    border: 2px solid #FF2E46;
+    padding: 14px 40px;
+    outline: none;
+    color: #A9A399;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.dtearrivee input[type = "time"] {
+    background: none;
+    margin: 5px auto;
+    display: block;
+    text-align: center;
+    border: 2px solid #FF2E46;
+    padding: 14px 40px;
+    outline: none;
+    color: #A9A399;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.dteprovenance input[type = "date"] {
+    background: none;
+    margin: 5px auto;
+    display: block;
+    text-align: center;
+    border: 2px solid #FF2E46;
+    padding: 14px 40px;
+    outline: none;
+    color: #A9A399;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+
+    /* ==== APPLI ==== */
+
+.appli{
+    background-color: #1a2222;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 4%;    
+    font-family: TTRounds;
+}
+
+.appli > span > h2{
+    color: #FF2E46;
+    font-size: 3em;
+    text-align: center;
+    margin : 0;
+}
+
+.appli > span > h3 {
+    font-size: 2em;
+    padding-bottom: 5%;
+}
+
+.appli > span > .app-container > a {
+    color: #A9A399;
+    margin-top: 8%;
+    padding: 30px;
+    padding-left: 0px;
+    backdrop-filter: brightness(0.5) blur(2px);
+    font-size: 1.5em;    
+    font-family: TTRoundsLight;
+    border-radius: 45px;
+    transition-duration: 0.3s;
+}
+
+.appli > span > .app-container > a:hover{
+    background-color: #1D2021;
+}
+
+#google_play, #apple_store{
+    height: 30px;
+    margin-right: 8%;
+    padding: 0;
+}
+
+.desc-container{
+    color: #A9A399;
+    margin-top: 5%;
+    padding-left: 0px;
+    font-size: 1.5em;    
+    font-family: TTRoundsLight;
+}
+
+#horaires-temps-reel, #arret-proximite {
+    padding-left: 5px;
+    padding-right: 10px;
+    height: 0.9em;
+}
+
+#favori{
+    padding-right: 10px;
+    height: 0.9em;
+}
+
+#appli_tel{
+    max-width: 19%;
+}
+
+
+    /* ==== VILLES ==== */
+
+.villes-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 2%;
+    padding-bottom: 5%;
+    flex-wrap: wrap;
+}
+
+.ville-container {    
+    border: solid 3px #3C4144;    
+    border-radius: 10px;
+    padding: 2%;
+    padding-top: 5%;
+    margin-bottom: 2%;
+}
+
+.ville-container > span {
+    padding : 5%;
+    border-radius: 8px;
+    backdrop-filter: brightness(0.5) blur(2px);
+    color: #A9A399;
+    font-family: TTRounds;   
+}
+
+.ville-container:hover {    
+    border: solid 3px #A12634;
+}
+
+h2{
+    color: #FF2E46;
+    font-size: 3em;
+    text-align: center;
+    padding-top: 3%;
+    font-family: TTRounds;    
+    margin: 0;
+}
+
+h3{
+    margin: 0;
+    padding-bottom: 3%;
+    font-size: 2em;
+    text-align: center;
+    padding-top: 0px;
+    font-family: TTRoundsLight;
+
+}
+
+.valence{
+    background-image: url(img/valence.jpg);
+    background-size: cover;
+    background-position: bottom;
+}
+
+.lyon{
+    background-image: url(img/lyon.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.paris{
+    background-image: url(img/paris.jpg);
+    background-size: cover;
+    background-position: bottom;
+}
+
+.marseille{
+    background-image: url(img/marseille.jpg);
+    background-size: cover;
+    background-position: bottom;
+}
+
+.lille{
+    background-image: url(img/lille.jpg);
+    background-size: cover;
+    background-position: bottom;
+}
+
+.strasbourg{
+    background-image: url(img/strasbourg.jpg);
+    background-size: cover;
+    background-position: bottom;
+}
+
+.rennes{
+    background-image: url(img/rennes.jpg);
+    background-size: cover;
+    background-position: bottom;
+}
+
+.toulouse{
+    background-image: url(img/toulouse.jpg);
+    background-size: cover;
+    background-position: bottom;
+}
+
+.grenoble{
+    background-image: url(img/grenoble.jpg);
+    background-size: cover;
+    background-position: bottom;
+}
+
+.bordeaux{
+    background-image: url(img/bordeaux.jpg);
+    background-size: cover;
+    background-position: bottom;
+}
+
+    /* ==== COUNTDOWN ==== */
+
+.yanis{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;        
+    background-color: #1a2222 ;
+    padding-bottom: 9%;
+}
+
+.count-container{
+    display: flex;
+    margin: auto;
+}
+
+.big-txt{    
+    font-size: 8rem;
+    margin: 0 2rem; 
+    margin-bottom: 13px;  
+}
+
+.count-container > .count-elem > span{
+    font-size: 1.5em;
+}
+
+.count-elem{
+    text-align: center;
+}
+
+    /* ========== RECHERCHE ========== */ 
+#contenu {
+    margin-left: 30%;
+}
+
+#petittrain {
+    display: flex;  
+    padding: 2%;
+    box-sizing: border-box;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+#petittrain > img {
+    width: 40px;
+    height: 40px;
+}
+
+#petittrain > div  {
+    width: 50%;
+    border: solid 3px #3C4144;    
+    border-radius: 10px;
+}
+
+#petittrain > div:hover {    
+    border: solid 3px #A12634;
+}
+
+
+.trainDescription {
+	padding: 3%;
+    padding-left: 15%;
+	box-sizing: border-box;
+    float: left;
+    text-align: center;
+}
+
+.trainDescription {
+	font-size: 1.1em;
+}
+.trainDescription #heure,#date {    
+	font-size: 0.9em;
+	font-style: italic;
+}
+
+.price { 
+    color:#A12634;
+    margin-top: 11%;
+	text-align: center;
+	font-size: 2em;
+	font-weight: bold;
+}
+
+/* ========== CONNEXION ========== */  
+
+  .box input[type = "text"],.box input[type = "password"]{
+    border:0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #3498db;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+  }
+  .box input[type = "text"]:focus,.box input[type = "password"]:focus{
+    width: 280px;
+    border-color: #2ecc71;
+  }
+  .box input[type = "submit"]{
+    border:0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #2ecc71;
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+  }
+  .box input[type = "submit"]:hover{
+    background: #2ecc71;
+  }
+
+
+/* ========== PANIER / HISTORIQUE ========== */  
+
+#contenuPanier {
+    margin-left: 30%;
+}
+
+#alltrash {
+    width: 40px;
+    height: 40px;
+}
+
+#deleteall,#deleteallHisto {
+    border:0;
+    background: none;
+    display: block;
+    text-align: center;
+    border: 2px solid rgb(192, 49, 49);
+    padding: 5px 20px;
+    outline: none;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    justify-content:flex-start;
+    width: 15%;
+}
+
+#deleteall:hover,#deleteallHisto:hover{
+    background: #c51c1c;
+}

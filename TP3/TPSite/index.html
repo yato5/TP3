@@ -1,0 +1,180 @@
+<html>
+    <head>
+        <title>Accueil</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="shortcut icon" type="image/png" href="img/logo.png">
+        <meta charset="utf-8">
+    </head>
+<!-- NAVIGUABLE -->
+    <header>
+        <nav>
+            <ul>
+                <a href="index.html"><img id="logo" class="header"src="img/logo.png" alt="train-logo"></a>
+                <a href="index.html"><li class="acc">Accueil</li></a>
+                <a href="panier.html"><li>Panier</li></a>
+                <a href="historique.html"><li>Historique</li></a>
+                <a href="favori.html"><li>Favori</li></a>
+                <a href="connexion.html"><li>Connexion</li></a>
+            </ul>
+        </nav>
+    </header>
+<!-- ACCUEUIL -->
+    <body onload="load()">
+        <!-- SLIDER EVENEMENTS / INFOS COMPAGNIE DE TRAIN -->
+            <div class="slider">
+                <div class="slide anim">
+                    <div class="numbertext">1 / 3</div>
+                    <img src="img/bg.jpg" alt="1st-event-background-image">
+                </div>
+                <div class="slide anim">
+                    <div class="numbertext">2 / 3</div>
+                    <img src="img/bg2.jpg" alt="2nd-event-background-image">
+                </div>
+                <div class="slide anim">
+                    <div class="numbertext">3 / 3</div>
+                    <img src="img/bg3.jpg" alt="3rd-event-background-image">
+                </div>                                 
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div> 
+        <!-- RECHERCHER -->
+                <form method="POST">
+
+                    <div class="container">
+                        <div class="depart-search">                    
+                            <label for="provenance">Gare de départ : </label>
+                            <select id="provenance">
+                            </select>
+
+                        <br>
+                        <hr>
+
+                            <label for="arrivee">Gare d'arrivée : </label>
+                                        <select id="arrivee">
+                                        </select>
+                                    </div>
+                        </div>               
+                    </div>
+                </form>
+
+                    <div class="container">
+                        <div class="dteprovenance">  
+                            <label for="dteprovenance">Date de départ :</label>
+                        <br>
+                            <input type="date" name="dteprovenance" id="dteprovenance">
+                        </div>
+                        
+                        <div class="dtearrivee">                        
+                            <label for="dtearrivee">Heure de départ :</label>
+                        <br>
+                            <input type="time" name="dtearrivee" id="heuredepart">
+                        </div>
+                    </div>
+
+                    <div class="container">
+                        <div class="submit">
+                            <input type="submit" value="GO !" name="submit" id="go">
+                        </div>
+                    </div>
+
+                <br><br>
+
+                <div class="appli">
+                    <span>
+                        <h2>Appli mobile</h2>
+                        <h3>Emmenez nous partout avec vous !</h3>
+                            <div class="desc-container">
+                                <img id="horaires-temps-reel" src="img/horaires-temps-reel.svg" alt="logo-horaire"> 
+                                <span>Horaires en temps réel</span>
+                            </div>
+                            <div class="desc-container">
+                                <img id="arret-proximite" src="img/arret-proximite.svg" alt="logo-arret">
+                                <span>Gare à proximité</span>
+                            </div>
+                            <div class="desc-container">
+                                <img id="favori" src="img/favori.svg" alt="logo-fav">
+                                <span>Favoris</span>
+                            </div>
+                            <div class="app-container app_store">
+                                <a href="https://www.apple.com/fr/shop" target="_blank">
+                                    <img id="apple_store" src="img/apple-store.png" alt="logo-apple-store">
+                                    Télécharger sur l'App Store.
+                                </a> 
+                            </div>
+                            <div class="app-container play_store">                                
+                                <a href="https://store.google.com/fr/?hl=fr" target="_blank">
+                                    <img id="google_play" src="img/google_play.png" alt="logo-google-play">                          
+                                    Télécharger sur Google Play
+                                </a> 
+                            </div>
+                    </span>
+                    <img id="appli_tel" src="img/appli_tel.png" alt="application-tel">
+                </div>
+
+                <h2>Villes où nous sommes présents</h2>
+                <h3>Pour vous déplacer dans les plus grandes villes de France !</h3>
+                <div class="villes-container">
+
+                    <a class="ville-container valence" href="https://www.google.com/maps/place/Valence" target="_blank" aria-label="ville-valence"><span>Valence</span></a>
+                    <a class="ville-container lyon" href="https://www.google.com/maps/place/Lyon" target="_blank" aria-label="ville-lyon"><span>Lyon</span></a>
+                    <a class="ville-container paris" href="https://www.google.com/maps/place/Paris" target="_blank" aria-label="ville-paris"><span>Paris</span></a>
+                    <a class="ville-container marseille" href="https://www.google.com/maps/place/Marseille" target="_blank" aria-label="ville-marseille"><span>Marseille</span></a>
+                    <a class="ville-container lille" href="https://www.google.com/maps/place/Lille" target="_blank" aria-label="ville-lille"><span>Lille</span></a>
+                    <a class="ville-container strasbourg" href="https://www.google.com/maps/place/Strasbourg" target="_blank" aria-label="ville-strasbourg"><span>Strasbourg</span></a>
+                    <a class="ville-container rennes" href="https://www.google.com/maps/place/Rennes" target="_blank" aria-label="ville-rennes"><span>Rennes</span></a>
+                    <a class="ville-container toulouse" href="https://www.google.com/maps/place/Toulouse" target="_blank" aria-label="ville-toulouse"><span>Toulouse</span></a>
+                    <a class="ville-container grenoble" href="https://www.google.com/maps/place/Grenoble" target="_blank" aria-label="ville-grenoble"><span>Grenoble</span></a>
+                    <a class="ville-container bordeaux" href="https://www.google.com/maps/place/Bordeaux" target="_blank" aria-label="ville-bordeaux"><span>Bordeaux</span></a>
+                </div>
+                <div class="yanis">
+                    <h2>Compte à rebours avant l'anniversaire de la compagnie</h2>
+                    <h3>Et donc le début des promotions !</h3>
+                    <div class="count-container">
+
+
+                        <div class="count-elem days-c">
+                            <p class="big-txt" id="days">00</p>
+                            <span>jours</span>
+                        </div>
+            
+                        <div class="count-elem hours-c">
+                            <p class="big-txt" id="hours">00</p>
+                            <span>heures</span>
+                        </div>
+            
+                        <div class="count-elem min-c">
+                            <p class="big-txt" id="mins">00</p>
+                            <span>minutes</span>
+                        </div>
+            
+                        <div class="count-elem sec-c">
+                            <p class="big-txt" id="secs">00</p>
+                            <span>secondes</span>
+                        </div>
+                    </div>        
+                </div>
+    </body>
+
+<!-- FOOTER -->
+    <footer>
+        <ul>
+            <a href="index.html"><img id="logo" class="footer" src="img/logo.png" alt="train-logo"></a>
+            <a href=" "><li>© 2021 yanis</li></a>
+            <a href=" "><li>Mentions légales</li>
+            <a href=" "><li>PDC</li></a>
+            <a href=" "><li>CGVU</li></a>            
+            <div class="oui">
+                <a href="mailto:yanis.bouhouche@etu.univ-grenoble-alpes.fr" class="mail-img" target="_blank"><img id="mail" src="img/mail.png" alt="mail-logo"></a>
+                <div class="mail">yanis.bouhouche@etu.univ-grenoble-alpes.fr</div>
+                <a class="tel-img"><img id="tel"src="img/tel.png" alt="tel-logo"></a>  
+                <div class="tel">07.60.19.10.82</div>
+                <a href="https://twitter.com/WaifuLegacy" target="_blank"><img id="twi" src="img/twitter.png" alt="twitter-logo"></a>
+                <a href="https://www.youtube.com/watch?v=eR-gpNyb0qU" target="_blank"><img id="ytb" src="img/youtube.png" alt="youtube-logo"></a>
+            </div>
+        </ul>
+    </footer>
+    <script type="text/javascript" src="script/main.js"></script>
+    <script type="text/javascript" src="script/script-slider.js"></script>
+    <script type="text/javascript" src="script/countdown.js"></script>
+</html>
+
